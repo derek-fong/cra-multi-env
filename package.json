@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "react-scripts start",
     "build": "react-scripts build",
+    "start": "react-scripts start",
+    "start:env": "cross-env-shell env-cmd --file .env.$npm_config_env npm start",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -37,5 +38,9 @@
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.3",
     "web-vitals": "^1.1.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "env-cmd": "^10.1.0"
   }
 }

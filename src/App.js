@@ -1,13 +1,23 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        {/* <img src={logo} className="App-logo" alt="logo" /> */}
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          <small>
+            You are running this application in {process.env.NODE_ENV} mode.
+          </small>
+        </p>
+        <p>
+          <small>Environment: {process.env.REACT_APP_ENVIRONMENT_NAME}</small>
+        </p>
+        <p>
+          <small>
+            Shared Environment Variable: {process.env.REACT_APP_SHARED_VAR}
+          </small>
         </p>
         <a
           className="App-link"
